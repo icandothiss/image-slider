@@ -16,7 +16,8 @@ function nextPage() {
   if (count === elements.length) {
     count = 0;
   }
-  elements[count].classList.remove("hidden");
+  setTimeout(() => elements[count].classList.remove("hidden"));
+
   contents[count].classList.add("animate-content");
 }
 
@@ -28,5 +29,5 @@ function prevPage() {
     count = elements.length;
   }
   count--;
-  elements[count].classList.remove("hidden");
+  setTimeout(() => elements[count].classList.remove("hidden"));
 }
