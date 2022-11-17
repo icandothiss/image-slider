@@ -13,7 +13,7 @@ function nextPage() {
     elements[i].classList.add("hidden");
   }
   count++;
-  if (count === 6) {
+  if (count === elements.length) {
     count = 0;
   }
   elements[count].classList.remove("hidden");
@@ -25,7 +25,7 @@ function prevPage() {
     elements[i].classList.add("hidden");
   }
   if (count === 0) {
-    count = 6;
+    count = elements.length;
   }
   count--;
   elements[count].classList.remove("hidden");
